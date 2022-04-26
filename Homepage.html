@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div {
+  background-color: lightgrey;
+  width: 1100px;
+  border: 2px solid #04AA6D;
+  padding: 50px;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+p {
+    text-align: center;
+    
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+tr:first-child {
+    background-color: #04AA6D;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+<h2>Assignment Tracker</h2>
+<br>
+<p> ANNOUNCEMENT 
+    <button>
+    <a href="/Announcement.html">Click Here To Discover New Features!</a>
+    </button>
+</p>
+<br>
+<p> SCHEDULE
+    <table>
+        <tr>
+        <th>SN</th>
+        <th>Course</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>CS 361</th>
+            <th>MVP</th>
+            <th>12/10/22</th>
+            <th>Compleated</th>
+            <th><button><a href="/Edit.html">Edit</a></button></th>
+            <th>
+                <button class="popup" onclick="myFunction()">Delete
+                    <span class="popuptext" id="myPopup">You are about to move this task to recycle bin!!!
+                    </span>
+                    </button>
+                  
+                  <script>
+
+                  function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                  }
+                  </script>
+            </th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>CS 361</th>
+            <th>MVP Update</th>
+            <th>28/10/22</th>
+            <th>Compleated</th>
+            <th><button><a href="/Edit.html">Edit</a></button></th>
+            <th>
+                <button class="popup" onclick="myFunction()">Delete
+                    <span class="popuptext" id="myPopup">You are about to move this task to recycle bin!!!
+                    </span>
+                    </button>
+                  
+                  <script>
+
+                  function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                  }
+                  </script>
+            </th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>CS 361</th>
+            <th>Group Project</th>
+            <th>15/12/22</th>
+            <th>Incomplete</th>
+            <th><button><a href="/Edit.html">Edit</a></button></th>
+            <th>
+                <button class="popup" onclick="myFunction()">Delete
+                    <span class="popuptext" id="myPopup">You are about to move this task to recycle bin!!!
+                    </span>
+                    </button>
+                  
+                  <script>
+
+                  function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                  }
+                  </script>
+            </th>
+        </tr>
+    </table>
+</p>
+<br>
+<p>FEATURES
+    <div>
+        <button>Click Here To Sort Task By Due Dates!</button>
+        <button>Click Here To Sort Task By Status!</button>
+        <button><a href="/AddTask.html">Click Here To Add New Task!</a></button>
+        <button><a href="/RecycleBin.html">Recycle Bin</a></button>
+        <button><a href="/AboutUs.html">About Us</a></button>
+        <button><a href="/FAQ.html">FAQ's</a></button>
+    </div>
+</p>
+
+</body>
+</html>
